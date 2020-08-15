@@ -5,21 +5,62 @@ using UnityEngine.UI;
 public class GetAttack : MonoBehaviour
 {
     [SerializeField] Text san;
+    [SerializeField] GameObject player;
     Collider2D collider2;
-    int san2 = 0;
+  public  int san2 = 0;
     bool IsTaugh = false;
-    private void Update()
+    int Frame = 0;
+
+    Slider slider;
+
+
+
+    private void FixedUpdate()
     {
-        if(IsTaugh)
+
+        if (IsTaugh)
         {
-            if(Input.GetKeyDown(KeyCode.J))
+            if (Input.GetKey(KeyCode.J))
             {
+                Frame++;
+                if (slider != null)
+                {
+
+                    UImanager._instance.HoldJ(Frame, slider);
+                }
+            }
+            if (Frame > 100)
+            {
+                Frame = 0;
+                if (collider2!=null)
+                {
+
                 Destroy(collider2.gameObject);
+                }
                 IsTaugh = false;
+                san2 += 10;
+                san.text = "<size=40><color=#ffffffff>善值：</color></size>" +"<size=50><color=red>"+san2.ToString()+"</color></size>" ;
+                if (player.transform.localScale.x<0)
+                {
+                player.transform.localScale += new Vector3(-0.1f, 0.1f, 0.1f);
+
+                }else if(player.transform.localScale.x > 0)
+                {
+                    player.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                }
+            }
+            if (Input.GetKeyUp(KeyCode.J))
+            {
+                Frame = 0;
             }
         }
+
+        if (san2>=100)
+        {
+            UImanager._instance.LoadScene("WIN");
+        }
     }
-    // Start is called before the first frame update
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -41,6 +82,29 @@ public class GetAttack : MonoBehaviour
         {
             IsTaugh = true;
             collider2 = collision;
+            slider = collision.transform.GetComponentInChildren<Slider>();
+            slider.maxValue = 100;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "pack")
+        {
+            slider.value = 0;
+            IsTaugh = false;
+            collider2 = collision;
+        }
+    }
+
+    public void GetDamage(int damage)
+    {
+        san2 -= damage;
+       san.text = "<size=40><color=#ffffffff>善值：</color></size>" +"<size=50><color=red>"+san2.ToString()+"</color></size>" ;
+        if (san2<=-10)
+        {
+            GetComponent<MoveMent>().Die();
+        }
+
     }
 }

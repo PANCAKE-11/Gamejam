@@ -8,6 +8,7 @@ TagManager:
   - good
   - bad
   - pack
+  - target
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - pack
+  - player
   - 
   - 
   - 

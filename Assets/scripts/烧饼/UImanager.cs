@@ -28,6 +28,7 @@ public class UImanager : MonoBehaviour
     [SerializeField] private Animator fadeImage;
     [SerializeField] private GameObject plot1;
     [SerializeField] private GameObject plot2;
+    [SerializeField] private Slider holdJ;
     
     string _playerName;
     public void Name()
@@ -65,5 +66,15 @@ public class UImanager : MonoBehaviour
     public void End()
     {
         Application.Quit();
+    }
+
+
+    public void finshedEnd()
+    {
+
+    }
+    public void HoldJ(float value,Slider slider)
+    {
+        slider.value = value;
     }
 }

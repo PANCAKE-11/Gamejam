@@ -52,7 +52,7 @@ public class MoveMent : MonoBehaviour
     }
     void Move()
     {
-        horizontalMove = Input.GetAxis("Horizontal");
+        horizontalMove = Input.GetAxisRaw("Horizontal");
         if (horizontalMove!=0&&!audioWalk.isPlaying)
         {
 
@@ -62,23 +62,19 @@ public class MoveMent : MonoBehaviour
     }
    void Filp()
     {
-        if (horizontalMove>0)
+        if (horizontalMove > 0 && horizontalMove != 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
-        }else if (horizontalMove < 0)
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+        }
+        else if (horizontalMove < 0 && horizontalMove != 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-Mathf.Abs(horizontalMove * transform.localScale.x), transform.localScale.y, 1);
         }
     }
 
     void SwitchAnim()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            anim.SetTrigger("Die");
-            canMove = false;
-            UImanager._instance.GameEnd();
-        }
+        
         anim.SetBool("Move", horizontalMove != 0);
     }
 
@@ -95,5 +91,13 @@ public class MoveMent : MonoBehaviour
 
         Debug.DrawRay(checkPosition.position, Vector2.down * distance, color);
         return hit;
+    }
+
+    public void Die()
+    {
+       
+            anim.SetTrigger("Die");
+            canMove = false;
+            UImanager._instance.GameEnd();
     }
 }

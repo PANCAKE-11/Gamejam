@@ -45,6 +45,7 @@ public class Parabola : MonoBehaviour
 
     void InstantiateRubbish()
     {
+        
                     Instantiate(casts[Random.Range(0,casts.Count)], transform.position, Quaternion.identity);
                     IsShoot = true;
     }

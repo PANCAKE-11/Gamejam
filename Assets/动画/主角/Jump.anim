@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: walk
+  m_Name: Jump
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,16 +20,15 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -6281364717265894529, guid: b3b80d24b6e0b994692771d82e72658f,
+      value: {fileID: 56480615975191399, guid: 1b2ed77146d1eda4a833833e9efe51f8, type: 3}
+    - time: 0.016666668
+      value: {fileID: -8920661982319702255, guid: 1b2ed77146d1eda4a833833e9efe51f8,
         type: 3}
-    - time: 0.25
-      value: {fileID: -1598276663160803198, guid: b3b80d24b6e0b994692771d82e72658f,
+    - time: 0.033333335
+      value: {fileID: 3853242788835846601, guid: 1b2ed77146d1eda4a833833e9efe51f8,
         type: 3}
-    - time: 0.5
-      value: {fileID: 7319163570092276637, guid: b3b80d24b6e0b994692771d82e72658f,
-        type: 3}
-    - time: 0.75
-      value: {fileID: 2631600822805184212, guid: b3b80d24b6e0b994692771d82e72658f,
+    - time: 0.05
+      value: {fileID: -8720185111301854414, guid: 1b2ed77146d1eda4a833833e9efe51f8,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -50,16 +49,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -6281364717265894529, guid: b3b80d24b6e0b994692771d82e72658f, type: 3}
-    - {fileID: -1598276663160803198, guid: b3b80d24b6e0b994692771d82e72658f, type: 3}
-    - {fileID: 7319163570092276637, guid: b3b80d24b6e0b994692771d82e72658f, type: 3}
-    - {fileID: 2631600822805184212, guid: b3b80d24b6e0b994692771d82e72658f, type: 3}
+    - {fileID: 56480615975191399, guid: 1b2ed77146d1eda4a833833e9efe51f8, type: 3}
+    - {fileID: -8920661982319702255, guid: 1b2ed77146d1eda4a833833e9efe51f8, type: 3}
+    - {fileID: 3853242788835846601, guid: 1b2ed77146d1eda4a833833e9efe51f8, type: 3}
+    - {fileID: -8720185111301854414, guid: 1b2ed77146d1eda4a833833e9efe51f8, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.76666665
+    m_StopTime: 0.06666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,18 +77,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.25
-    functionName: playWalkAudio
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.75
-    functionName: playWalkAudio
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

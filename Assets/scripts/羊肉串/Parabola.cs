@@ -8,7 +8,7 @@ public class Parabola : MonoBehaviour
     [SerializeField] GameObject Left;
     [SerializeField] GameObject Right;
     SpriteRenderer sr;
-    float LauchForce = 3.0f;
+    [SerializeField] float LauchForce =2.0f;
     Rigidbody2D rb;
     bool IsShoot = false;
     // Start is called before the first frame update
@@ -39,7 +39,6 @@ public class Parabola : MonoBehaviour
     }
 
 
-  
 
     private void OnCollisionStay2D(Collision2D collision)
     {

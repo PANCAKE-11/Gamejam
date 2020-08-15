@@ -10,6 +10,8 @@ public class UImanager : Singleton<UImanager>
     [SerializeField] private GameObject PlayerName;
     [SerializeField] private Text _InputName;
     [SerializeField] private Text _PlayerName;
+    [SerializeField] private Animator fadeImage;
+    [SerializeField] private GameObject plot1;
     
     string _playerName;
     public void Name()
@@ -22,6 +24,14 @@ public class UImanager : Singleton<UImanager>
     {
         SceneManager.LoadScene(sceneName);
     }
+   public void FadeIn()
+    {
+        fadeImage.SetTrigger("fade");
+    }
 
+    public void PlayPolt()
+    {
+        plot1.SetActive(true);
+    }
 
 }

@@ -10,7 +10,7 @@ public class MoveMent : MonoBehaviour
     public GameObject InputPanel;
     Animator anim;
     Rigidbody2D rb;
-    bool canMove;
+   public bool canMove;
    public AudioSource audioWalk;
     [SerializeField] private bool _pressedJump;
     [SerializeField] private Vector2 _jumpForce;

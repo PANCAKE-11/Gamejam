@@ -27,6 +27,7 @@ public class UImanager : MonoBehaviour
     [SerializeField] private Text _PlayerName;
     [SerializeField] private Animator fadeImage;
     [SerializeField] private GameObject plot1;
+    [SerializeField] private GameObject plot2;
     
     string _playerName;
     public void Name()
@@ -50,7 +51,11 @@ public class UImanager : MonoBehaviour
     {
         plot1.SetActive(true);
     }
+    public void Playpolt2()
+    {
+        plot2.SetActive(true);
 
+    }
 
     public void GameEnd()
     {

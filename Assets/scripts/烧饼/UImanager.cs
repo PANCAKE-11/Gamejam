@@ -77,4 +77,17 @@ public class UImanager : MonoBehaviour
     {
         slider.value = value;
     }
+
+    public void Full()
+    {
+        Screen.SetResolution(1920, 1080, FullScreenMode.FullScreenWindow);
+    }
+
+    public void notFull()
+    {
+        Screen.SetResolution(1600, 900, FullScreenMode.Windowed);
+
+    }
+
+    
 }

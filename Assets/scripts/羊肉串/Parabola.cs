@@ -10,6 +10,7 @@ public class Parabola : MonoBehaviour
     bool IsShoot = false;
    [SerializeField] float instaTimer;
    [SerializeField] float instaCounter;
+  public  AudioSource castAudio;
 
 
    public List<GameObject> casts;
@@ -47,6 +48,7 @@ public class Parabola : MonoBehaviour
     {
         
                     Instantiate(casts[Random.Range(0,casts.Count)], transform.position, Quaternion.identity);
+                     castAudio.Play();
                     IsShoot = true;
     }
 }

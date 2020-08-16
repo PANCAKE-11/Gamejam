@@ -48,6 +48,11 @@ public class MoveMent : MonoBehaviour
                 rb.AddForce(_jumpForce, ForceMode2D.Impulse);
                 _pressedJump = false;
             }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UImanager._instance.EndPanel.SetActive(true);
+        }
         
     }
     void Move()

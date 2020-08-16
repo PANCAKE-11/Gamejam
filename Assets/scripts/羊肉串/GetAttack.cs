@@ -39,7 +39,7 @@ public class GetAttack : MonoBehaviour
                 }
                 IsTaugh = false;
                 san2 += 10;
-                san.text = "<size=40><color=#ffffffff>善值：</color></size>" +"<size=50><color=red>"+san2.ToString()+"</color></size>" ;
+                san.text = san2.ToString() ;
                 if (player.transform.localScale.x<0)
                 {
                 player.transform.localScale += new Vector3(-0.1f, 0.1f, 0.1f);
@@ -100,7 +100,7 @@ public class GetAttack : MonoBehaviour
     public void GetDamage(int damage)
     {
         san2 -= damage;
-       san.text = "<size=40><color=#ffffffff>善值：</color></size>" +"<size=50><color=red>"+san2.ToString()+"</color></size>" ;
+       san.text = san2.ToString() ;
         if (san2<=-10)
         {
             GetComponent<MoveMent>().Die();

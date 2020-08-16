@@ -10,6 +10,7 @@ public class ShotSelf : MonoBehaviour
     float LauchForce = 0.8f;
     Rigidbody2D rb;
     [SerializeField] float high;
+    [SerializeField] int Damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class ShotSelf : MonoBehaviour
         Vector2 PlayerPosition = Player.transform.position;
         Vector2 selfPosition = transform.position;
         Vector2 Direction = new Vector2((PlayerPosition.x - selfPosition.x) / 2+PlayerPosition.x, high);
-        print(Direction);
+
         float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
          rb.velocity = Direction * LauchForce;
@@ -40,15 +41,16 @@ public class ShotSelf : MonoBehaviour
         if (collision.gameObject.tag == "Ground" )
         {
             sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, sr.color.a - Time.deltaTime * 0.8f);
+            gameObject.tag = "Untagged";
             Destroy(gameObject, 3);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player"&&gameObject.CompareTag("bad"))
         {
-            collision.gameObject.GetComponent<GetAttack>().GetDamage(2);
+            collision.gameObject.GetComponent<GetAttack>().GetDamage(Damage);
             
         }
 

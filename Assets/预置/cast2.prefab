@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8646874925050942596}
   m_Layer: 0
   m_Name: cast2
-  m_TagString: Untagged
+  m_TagString: bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,4 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb612582c7850a94a88e273426f6c8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LauchForce: 2
+  high: 0
+  Damage: 2

@@ -6,6 +6,6 @@ public class FadeOutImage : MonoBehaviour
 {
     public void fade()
     {
-        UImanager._instance.LoadScene("GoodLevel");
+        UImanager._instance.LoadScene("DadLevel");
     }
 }

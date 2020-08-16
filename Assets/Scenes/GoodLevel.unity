@@ -869,6 +869,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269627852}
   m_CullTransparentMesh: 0
+--- !u!1 &1338554034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338554036}
+  - component: {fileID: 1338554035}
+  m_Layer: 0
+  m_Name: SpawnDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1338554035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338554034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143d8c917ea7afe4fb079d6b26dd9dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - {fileID: 5244215095041242047, guid: f1b057f9c2f1eef49b29c3a302767458, type: 3}
+  - {fileID: 8123071982639058736, guid: 2059a45e5793f064885328d571715502, type: 3}
+  - {fileID: 3080899065677940578, guid: 64c65b94ac1e2f246989cf882754cc89, type: 3}
+  - {fileID: 4728561064955005560, guid: 58354a0d476e6d24494c68e812cae8d3, type: 3}
+  - {fileID: 443462537919538054, guid: 328ce78a129b4994e960f14953ed0a5b, type: 3}
+  - {fileID: 3331746377765388521, guid: ae78003a41c5bd3439c8e8709dcea49d, type: 3}
+  - {fileID: 60481461249141499, guid: 39850a32505dee84592ea36cf57e803a, type: 3}
+  - {fileID: 2089851304269668174, guid: 1541b59dd6b71584c9b60ac33bdd1184, type: 3}
+  - {fileID: 495374654473546904, guid: 76b18b1c40657e64a985d085609f8ae7, type: 3}
+  - {fileID: 5886260128785317160, guid: c9b6b604f78294b4fbf4f4cb24467e0f, type: 3}
+  - {fileID: 2842029004546391920, guid: 6bb1771be69100e40b7f4625a6aace74, type: 3}
+  - {fileID: 3060516471258376425, guid: 46749fc4f723d3b43b0d9ca5980f8a20, type: 3}
+  - {fileID: 4473916402925302829, guid: 5f767f829959b9c47911fc79d22b4110, type: 3}
+  - {fileID: 2668375409670315525, guid: 9bef7b0397afce749aae36d2e835373f, type: 3}
+  - {fileID: 8461794817252523809, guid: 22ff886e3e8b6a649aba318aa68368b6, type: 3}
+--- !u!4 &1338554036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338554034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.46, y: 3.73, z: -0.13476562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1342405368 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5398205216980284815, guid: f4cf6cd2edfb6b74497997279191a9a9,
